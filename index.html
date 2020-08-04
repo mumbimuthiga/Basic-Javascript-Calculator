@@ -3,7 +3,8 @@
 <head>
 	<title>Basic Calculator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet"  href="funcit.js">
+	<script type="text/javascript" src="funcit.js"></script>
+<!--	<link rel="stylesheet" type="text/javascript" href="funcit.js">-->
 </head>
 <body>
 <form name="calculator">
@@ -31,9 +32,9 @@
 	<td><input type="button" class="operator" name="multiply" value="X" onclick="calculator.display.value+='*'"></td>
 </tr>
 <tr>
-	<td><input type="button" name="clear" value="C" onclick="calculator.display.value+=''"></td>
+	<td><input type="button" name="clear" value="C" onclick="calculator.display.value=''"></td>
 	<td><input type="button" name="zero" value="0" onclick="calculator.display.value+='0'"></td>
-	<td><input type="button" name="doit" value="=" onclick="calculator.display.value =operate()"></td>
+	<td><input type="button" name="doit" value="=" onclick="calculator.display.value =operate(calculator.display.value)"></td>
 	<td><input type="button" name=" divide" value="/" onclick="calculator.display.value+='/'"></td>
 </tr>
 </tr>
